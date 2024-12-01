@@ -2,7 +2,7 @@
 ## Dataset
 This data set shows the number of electric vehicles and hybrid vehicles registered in the state of Washington.<br />
 Has 17 columns/variables: VIN, Country, City, State, Postal Code, Model Year, Make, Model, Electric Vehicle Type, Clean Alternative Fuel Vehicle Eligibility (CAFV), Electric Range, Base MSRP, Legislative District, DOL Vehicle ID, Vehicle Location, Electric Utility, 2020 Census Tract.
-Source: ([Link](https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2/about_data))
+Source: ([Link](https://catalog.data.gov/dataset/electric-vehicle-population-data))
 ## Project Objectives
 Data Visualization: Show the data split of car years, models, and location. <br />
 Example: Chart showing the percentage of electric cars in the state of Washington which are made by Tesla, vs toyota, vs nissan, etc. <br />
