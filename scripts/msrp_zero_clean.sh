@@ -1,7 +1,10 @@
 #!/bin/bash
 
+input=$1
+output=$2
+
 # Extract all non-zero values of the Base MSRP column
-awk -F',' '$12 > 0 {print $12}' Electric_Vehicle_Population_Data_cleaned_cafv.csv | sort -n | awk '{
+awk -F',' '$12 > 0 {print $12}' "$input" | sort -n | awk '{
     a[NR]=$1
 } END {
     if (NR%2==1) print a[(NR+1)/2]; 
@@ -16,5 +19,4 @@ awk -F',' -v OFS=',' -v median=$median '
             $12 = median
         }
         print $0
-    }' Electric_Vehicle_Population_Data_cleaned_cafv.csv > Electric_Vehicle_Population_Data_cleaned_msrp.csv
-
+    }' "$input" > "$output"

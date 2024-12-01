@@ -1,5 +1,8 @@
 #!/bin/bash
 
+input=$1
+output=$2
+
 # Replace "Clean Alternative Fuel Vehicle Eligible" with "ELIGIBLE" and
 # "Not eligible due to low battery range" with "INELIGIBLE" in column 10
 awk -F',' -v OFS=',' '
@@ -11,4 +14,4 @@ awk -F',' -v OFS=',' '
             $10 = "INELIGIBLE"
         }
         print $0
-    }' Electric_Vehicle_Population_Data_ER_NO_ZEROS.csv > Electric_Vehicle_Population_Data_cleaned_cafv.csv
+    }' "$input" > "$output"

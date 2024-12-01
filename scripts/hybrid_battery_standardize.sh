@@ -1,5 +1,8 @@
 #!/bin/bash
 
+input=$1
+output=$2
+
 # Replace any occurrence of "Plug-in Hybrid Electric Vehicle (PHEV)" with "HYBRID"
 # and any occurrence of "Battery Electric Vehicle (BEV)" with "BATTERY" in column 9
 awk -F',' -v OFS=',' '
@@ -13,4 +16,4 @@ awk -F',' -v OFS=',' '
         
         # Print the modified row
         print $0
-    }' Electric_Vehicle_Population_Data_cleaned_msrp.csv > Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv
+    }' "$input" > "$output"
