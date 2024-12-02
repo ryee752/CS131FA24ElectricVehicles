@@ -1,5 +1,9 @@
 # Preprocessing
 The shell scripts listed are used for preprocessing the data in ([Link](https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2/about_data))
+## eu_standardize.sh
+This script fixes rows with more than 17 columns due to having an additional "," in the value for electric utility while using "," as the delimiter. <br />
+The parameters are the input file and the output file.<br />
+Ex: sh eu_standardize.sh Electric_Vehicle_Population_Data.csv Electric_Vehicle_Population_Data_cleaned.csv
 ## replace_zero_range.sh
 This script replaces rows with an electric range of 0 with the average electric range of cars with the same model and make. If the electric range is still 0 after preprocessing, the rows are deleted. <br />
 The parameters are the input file and the output file.<br />
