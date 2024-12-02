@@ -12,14 +12,14 @@ Ex: sh cafv_standardize.sh Electric_Vehicle_Population_Data_ER_NO_ZEROS.csv Elec
 This script replaces rows with a base MSRP of 0 with the average base MSRP of cars of the same make. If the average MSRP is 0, the base MSRP is replaced with the median base MSRP of all cars. <br />
 The parameters are the input file and the output file.<br />
 Ex: sh msrp_zero_clean.sh Electric_Vehicle_Population_Data_cleaned_cafv.csv Electric_Vehicle_Population_Data_cleaned_msrp.csv
-## hybrid_battery_standardize.sh
+## ev_type_standardize.sh
 This script standardizes vehicle type by replacing all instances of hybrid cars with “HYPBRID” and all instances of battery electric cars with “BATTERY”. <br />
 The parameters are the input file and the output file.<br />
-Ex: sh hybrid_battery_standardize.sh Electric_Vehicle_Population_Data_cleaned_msrp.csv Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv
-## standardize_address.sh
+Ex: sh ev_type_standardize.sh Electric_Vehicle_Population_Data_cleaned_msrp.csv Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv
+## address_standardize.sh
 This script standardizes the county and city columns by capitalizing all values in the column that is selected. <br />
 The parameters are the input file, the output file, and the column to be standardized (2 or 3).<br />
-Ex: sh standardize_address.sh Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv temp.csv 2
+Ex: sh address_standardize.sh Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv temp.csv 2
 ## clean_non_WA.sh
 This script removes all instances where the residency of the car owner is outside of Washington. <br />
 The parameters are the input file, the output file.<br />
