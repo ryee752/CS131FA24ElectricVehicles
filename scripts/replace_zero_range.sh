@@ -27,5 +27,5 @@ awk -F',' -v OFS=',' '
         if ($11 != 0) {
             print $0
         }
-    }' "$input" > "output"
+    }' "$input" > "$output"
 
