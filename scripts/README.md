@@ -9,7 +9,7 @@ This script standardizes the Clean Alternative Fuel Vehicle (CAFV) Eligibility c
 The parameters are the input file and the output file.<br />
 Ex: sh cafv_standardize.sh Electric_Vehicle_Population_Data_ER_NO_ZEROS.csv Electric_Vehicle_Population_Data_cleaned_cafv.csv
 ## msrp_zero_clean.sh
-This script replaces rows with an base msrp of 0 with the median base msrp of all cars. <br />
+This script replaces rows with a base MSRP of 0 with the average base MSRP of cars of the same make. If the average MSRP is 0, the base MSRP is replaced with the median base MSRP of all cars. <br />
 The parameters are the input file and the output file.<br />
 Ex: sh msrp_zero_clean.sh Electric_Vehicle_Population_Data_cleaned_cafv.csv Electric_Vehicle_Population_Data_cleaned_msrp.csv
 ## hybrid_battery_standardize.sh
@@ -18,5 +18,18 @@ The parameters are the input file and the output file.<br />
 Ex: sh hybrid_battery_standardize.sh Electric_Vehicle_Population_Data_cleaned_msrp.csv Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv
 ## standardize_address.sh
 This script standardizes the county and city columns by capitalizing all values in the column that is selected. <br />
-The parameters are the input file, the output file, the column to be standardized (2 or 3).<br />
+The parameters are the input file, the output file, and the column to be standardized (2 or 3).<br />
 Ex: sh standardize_address.sh Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv temp.csv 2
+## clean_non_WA.sh
+This script removes all instances where the residency of the car owner is outside of Washington. <br />
+The parameters are the input file, the output file.<br />
+Ex: sh clean_non_WA.sh Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv temp.csv
+## remove_missing_values.sh
+This script removes all rows with missing values <br />
+The parameters are the input file, the output file.<br />
+Ex: sh remove_missing_values.sh Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv temp.csv
+## remove_fields.sh
+This script removes removes the selected columns from the input file. <br />
+The parameters are the input file, the output file, and the list of columns to be removed.<br />
+Ex: sh remove_fields.sh Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv temp.csv 1,2,3,4,5
+
