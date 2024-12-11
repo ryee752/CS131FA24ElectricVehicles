@@ -32,6 +32,10 @@ Ex: sh clean_non_WA.sh Electric_Vehicle_Population_Data_cleaned_hybrid_battery.c
 This script removes all rows with missing values <br />
 The parameters are the input file, the output file.<br />
 Ex: sh remove_missing_values.sh Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv temp.csv
+## coords_standardize.sh
+This script standardizes the coordinates for longitude and latitude in the Vehicle Location column <br />
+The parameters are the input file, the output file.<br />
+Ex: sh coords_standardize.sh Electric_Vehicle_Population_Data_cleaned_hybrid_battery.csv temp.csv
 ## remove_fields.sh
 This script removes removes the selected columns from the input file. <br />
 The parameters are the input file, the output file, and the list of columns to be removed.<br />
